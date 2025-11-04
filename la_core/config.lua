@@ -1,4 +1,6 @@
-Config = {}
+local Config = {
+    EnableCore = true,
+    Debug = false
+}
 
-Config.EnableCore = true
-Config.Debug = false
+return Config
