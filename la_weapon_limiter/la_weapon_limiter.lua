@@ -43,15 +43,15 @@ end
 local function stripWeapon(src, weapon)
     local xPlayer = exports.ox_inventory:GetPlayer(src)
     if not xPlayer then return end
-    local ok, has = pcall(function()
-        return xPlayer:Search('weapon', weapon)
+    local ok, count = pcall(function()
+        return xPlayer:Search('count', weapon)
     end)
     if not ok then
         notify(src, 'Unable to verify weapon ownership', 'error')
         return
     end
-    if has then
-        xPlayer:RemoveItem('weapon', weapon, 1)
+    if type(count) == 'number' and count > 0 then
+        xPlayer:RemoveItem(weapon, 1)
         notify(src, "That weapon is not authorized for your job.")
     end
 end
@@ -91,7 +91,12 @@ local function recheckInventory(_, newJob)
             local weaponName = string.upper(item.name)
             if not isAllowed(newJob.name, weaponName) then
                 if Config.Mode == "strip" then
-                    xPlayer:RemoveItem('weapon', weaponName, 1)
+                    local amount = item.count or 1
+                    if amount > 0 then
+                        xPlayer:RemoveItem(weaponName, amount)
+                    else
+                        xPlayer:RemoveItem(weaponName, 1)
+                    end
                     notify(src, weaponName .. " removed due to job restriction.")
                 elseif Config.Mode == "warn" then
                     notify(src, weaponName .. " is not allowed for your job.", 'warning')
