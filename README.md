@@ -1,6 +1,6 @@
-# Los Animales RP — `la_codex`
+# Los Animales RP — `la_rp_casefiles`
 
-`la_codex` is the canonical data and config repository for the Los Animales RP server. It contains era policies, whitelists, shared JSON/Lua catalogs, server snippets, and contributor guidance used across LA resources. Gumshoe (the detective gameplay resource) is intentionally excluded and lives in `la_gumshoe`.
+`la_rp_casefiles` is the canonical data and config repository for the Los Animales RP server. It contains era policies, whitelists, shared JSON/Lua catalogs, server snippets, and contributor guidance used across LA resources. Gumshoe (the detective gameplay resource) is intentionally excluded and lives in `la_gumshoe`.
 
 ---
 
