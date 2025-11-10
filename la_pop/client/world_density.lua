@@ -1,3 +1,5 @@
+local Config = require("config")
+
 -- Pulphouse Press – World Density Manager
 CreateThread(function()
     while true do

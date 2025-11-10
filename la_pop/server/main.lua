@@ -1,3 +1,5 @@
+local Config = require("config")
+
 -- la_population/server/main.lua
 local patrolStarted = false
 

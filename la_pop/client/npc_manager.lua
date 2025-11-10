@@ -1,3 +1,5 @@
+local Config = require("config")
+
 local NPCs, patrolVehicles = {}, {}
 
 local function resolveModel(model)

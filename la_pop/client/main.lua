@@ -1,3 +1,5 @@
+local Config = require("config")
+
 -- Handles interactions and speech bubbles
 local NPCs = {}
 
