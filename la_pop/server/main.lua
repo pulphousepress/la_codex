@@ -1,10 +1,13 @@
+local Config = require("config")
+
 -- la_population/server/main.lua
 local patrolStarted = false
 
 AddEventHandler('onResourceStart', function(res)
     if res == GetCurrentResourceName() then
         print('[LA_POPULATION] Resource started, syncing all players...')
-        Wait(2000) SyncNPCsToAll()
+        Wait(2000)
+        SyncNPCsToAll()
     end
 end)
 

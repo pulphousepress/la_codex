@@ -1,34 +1,34 @@
 -- la_pop/config.lua
 -- Pulphouse Press – Los Animales RP Unified Population Controller
 
-Config = {}
-Config.Debug = true
+local Config = {
+    Debug = true,
 
--------------------------------------------------
--- WORLD DENSITY  (from qbx_density)
--------------------------------------------------
-Config.Density = {
-    Vehicles = 0.6,
-    Peds = 0.8,
-    Scenarios = 0.8,
-    ParkedVehicles = 0.7
-}
+    -------------------------------------------------
+    -- WORLD DENSITY  (from qbx_density)
+    -------------------------------------------------
+    Density = {
+        Vehicles = 0.6,
+        Peds = 0.8,
+        Scenarios = 0.8,
+        ParkedVehicles = 0.7
+    },
 
-Config.Zones = {
-    City      = { Veh = 0.8, Ped = 1.0 },
-    Rural     = { Veh = 0.4, Ped = 0.6 },
-    Toontown  = { Veh = 0.0, Ped = 0.0, Override = true }
-}
+    Zones = {
+        City      = { Veh = 0.8, Ped = 1.0 },
+        Rural     = { Veh = 0.4, Ped = 0.6 },
+        Toontown  = { Veh = 0.0, Ped = 0.0, Override = true }
+    },
 
--------------------------------------------------
--- MISSION ROW NPCS  (from la_npcs_live)
--------------------------------------------------
-Config.NPCS = {
-    -- Jailor
-    { coords = vector3(465.08, -990.15, 24.91), heading = 68.38,
-      model = "s_m_y_cop_01", name = "Jailor",
-      text = "Press ~o~[E]~w~ to talk to the ~y~Jailor",
-      event = "la_pop:jailor",
+    -------------------------------------------------
+    -- MISSION ROW NPCS  (from la_npcs_live)
+    -------------------------------------------------
+    NPCS = {
+        -- Jailor
+        { coords = vector3(465.08, -990.15, 24.91), heading = 68.38,
+          model = "s_m_y_cop_01", name = "Jailor",
+          text = "Press ~o~[E]~w~ to talk to the ~y~Jailor",
+          event = "la_pop:jailor",
       dialogue = "Can I help you, buddy?", sound = "GENERIC_HI" },
 
     -- Fingerprint Clerk
@@ -70,4 +70,7 @@ Config.NPCS = {
       text = "Two officers sit in the patrol car.",
       dialogue = "Let’s make a loop around the block.",
       sound = "GENERIC_RADIO_CHATTER", debug = true }
+    }
 }
+
+return Config
