@@ -11,7 +11,9 @@ dependency 'la_engine'
 shared_script 'config.lua'
 
 server_scripts {
-  'server/main.lua'
+  'server/main.lua',
+  'server/addons_registry.lua',
+  'server/commands.lua'
 }
 
 client_scripts {
