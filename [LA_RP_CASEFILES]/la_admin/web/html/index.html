@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="panel" class="panel">
+        <h2>Los Animales Admin Panel</h2>
+        <div class="section">
+            <h3>Asset Registry</h3>
+            <select id="assetMode">
+                <option value="off">Off</option>
+                <option value="warn">Warn</option>
+                <option value="block">Block</option>
+            </select>
+            <button id="assetApply">Apply</button>
+        </div>
+        <div class="section">
+            <h3>Weapon Limiter</h3>
+            <select id="weaponMode">
+                <option value="off">Off</option>
+                <option value="warn">Warn</option>
+                <option value="block">Block</option>
+                <option value="strip">Strip</option>
+            </select>
+            <button id="weaponApply">Apply</button>
+        </div>
+        <div class="section">
+            <h3>Population</h3>
+            <button id="popResync">Resync NPCs</button>
+            <button id="popClear">Clear NPCs</button>
+        </div>
+        <div id="status" class="status"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
