@@ -5,7 +5,9 @@ return {
     sets = {
         weather         = 'sets/weather.lua',
         npcs            = 'sets/npcs.lua',
-        weather_rules   = 'sets/weather_rules.lua'
+        weather_rules   = 'sets/weather_rules.lua',
+        era_vehicles    = 'sets/era_vehicles.lua',
+        era_peds        = 'sets/era_peds.lua'
     },
     sql = {
         seed = 'sql/seed.sql'
